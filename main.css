@@ -1,0 +1,21 @@
+
+
+button.done,
+button.undone {
+    border-radius: 50%;
+}
+
+
+button.undone {
+    color: red;
+}
+button {
+    background: none;
+    border: none;
+
+}
+
+input {
+    margin: 5px;
+    padding: 5px;
+}
