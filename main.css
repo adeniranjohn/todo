@@ -1,5 +1,3 @@
-
-
 button.done,
 button.undone {
     border-radius: 50%;
@@ -9,10 +7,19 @@ button.undone {
 button.undone {
     color: red;
 }
+
+button.done {
+    color: #2CBF51;
+}
+
 button {
     background: none;
     border: none;
 
+}
+
+hr {
+    
 }
 
 input {

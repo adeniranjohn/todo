@@ -10,11 +10,20 @@
     To-Do 
     <form>
         <section id="inputs">
-        <input type='text' placeholder="To-Do" width='500px'><button type="button" class="btn done">👍</button><button type="button" class="btn undone">👎</button>
+        <input type='text' placeholder="To-Do" width='500px' id='todo'><button type="button" id="save">Save</button>
+        <hr>
+
         </section>
         <button id="add">+ Add</button>
         <button type="submit">Save</button>
+        <section>
+            <ul id="todos">
+
+            </ul>
+
+        </section>
     </form>
+        <script type="text/javascript" src="/scripts/store.js"></script>
     <script type="text/javascript" src="/scripts/script.js" ></script>
 </body>
 </html>
