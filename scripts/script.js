@@ -1,9 +1,8 @@
-const addInput = document.getElementById('add');
 const inputs = document.getElementById('inputs');
-const savebtn = document.getElementById('save')
+const save = document.getElementById('save')
 const todo = document.getElementById('todo');
-
-const today = new Date();
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'  ,hour12: true };
+const today = new Date().toLocaleString('en-US', options);
 const todoStorage = window.localStorage;
 const todoSection = document.querySelector('ul#todos')
 let mytodos;
@@ -21,28 +20,34 @@ window.addEventListener('load', (event) => {
         mytodos =JSON.parse(todoStorage.getItem('todos'));
         console.log(mytodos);
         mytodos.forEach((todo) => {
-            todoSection.innerHTML += `<li>${todo}</li>`;
+            todoSection.innerHTML += `<li><span class='todo'>${todo.value}</span> <span class='date'> ${(todo.date)} </span></li>`;
         })
     }
    
 })
 
-addInput.addEventListener("click", (event) => {
-    event.preventDefault();
-    console.log("clicked");
 
+
+
+save.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if(inputTodo.value == 'null'){
+
+    }else{
+        todoObj = {
+            'value': inputTodo.value,
+            'date': today.toLocaleString(),
+            'status': ''
+
+        }
+        mytodos.push(todoObj);
+        todoStorage.setItem('todos', JSON.stringify(mytodos));
+        location.reload();
+        inputTodo.value = '';
+       
+        console.log(mytodos);
+    }
+    
 })
 
-
-savebtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    mytodos.push(todo.value);
-    todoSection.innerHTML += `<li>${todo.value}</li>`  
-    todo.value = '';
-    todoStorage.setItem('todos', JSON.stringify(mytodos));
-    console.log(mytodos);
-})
-
-function displayTodos() {
-    display.innerHTML = todos
-}

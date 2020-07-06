@@ -1,28 +1,58 @@
-button.done,
-button.undone {
-    border-radius: 50%;
+body,
+html {
+    max-width: 768px;
+    margin: 0 auto;
+    width: 100%;
 }
 
+    section#inputs {
+        margin: 5px auto;
+        padding: 10px;
+        display: flex;
+        align-items: stretch;
+    }
 
-button.undone {
-    color: red;
-}
+    input#inputTodo {
+        flex-grow: 10;
+    }
 
-button.done {
-    color: #2CBF51;
-}
+    button.done,
+    button.undone {
+        border-radius: 50%;
+    }
 
-button {
-    background: none;
-    border: none;
 
-}
+    button.undone {
+        color: red;
+    }
+    section#display {
+        margin: 10px;
+    }
+    ul#todos li {
+        list-style: none;
+        padding: 5px;
+    }
 
-hr {
+    button.done {
+        color: #2CBF51;
+    }
+
+    button {
+        background: none;
+        border: none;
+
+    }
+
+    hr {}
+
+    input {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    span.date {
+        float: right;
+        font-size: x-small;
+        font-weight: thin;
     
-}
-
-input {
-    margin: 5px;
-    padding: 5px;
-}
+    }
