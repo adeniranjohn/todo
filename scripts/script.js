@@ -20,13 +20,17 @@ window.addEventListener('load', (event) => {
         mytodos =JSON.parse(todoStorage.getItem('todos'));
         console.log(mytodos);
         mytodos.forEach((todo) => {
-            todoSection.innerHTML += `<li><span class='todo'>${todo.value}</span> <span class='date'> ${(todo.date)} </span></li>`;
+            todoSection.innerHTML += `<li onclick="done(event)"><span class='todo'>${todo.value}</span> <span class='date'> ${(todo.date)} </span></li>`;
         })
     }
    
-})
+});
 
+function done(event){
+    console.log(event.target.className);
+    event.target.classList.add('done');
 
+};
 
 
 save.addEventListener('click', (event) => {
@@ -50,4 +54,6 @@ save.addEventListener('click', (event) => {
     }
     
 })
+
+
 

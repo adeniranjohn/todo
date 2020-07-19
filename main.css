@@ -28,9 +28,13 @@ html {
     section#display {
         margin: 10px;
     }
+
+    ul#todos {
+        padding: 0px;
+    }
     ul#todos li {
         list-style: none;
-        padding: 5px;
+        padding: 0;
     }
 
     button.done {
@@ -55,4 +59,8 @@ html {
         font-size: x-small;
         font-weight: thin;
     
+    }
+
+    .done {
+        text-decoration: underline;
     }
